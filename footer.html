@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>footer</title>
+    <style>
+        #footer{
+            width: 100%;
+            background-color: #222;
+        }
+        #footer_content{
+            padding: 20px 20px 80px;
+        }
+        #footer_content hr{
+            background-color: #999;
+            border: 0;
+            height: 1px;
+        }
+        #footer_content p a{
+            color: #999;
+        }
+        #footer_content p a:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        #footer p{
+            color: #999;
+            padding: 30px 0 0;
+            font-size: .8em;
+            line-height: 22px;
+        }
+        #footerMenu_sec{
+            padding: 10px 0 50px;
+        }
+        #footerMenu_sec li{
+            float: left;
+            margin-right: 20px;
+        }
+        #footerMenu_sec li a{
+            font-size: .8em;
+            color: #999;
+        }
+        #footerMenu_sec li a:hover{
+            text-decoration: underline;
+        }
+        #footerMenu_sec li a span{
+            color: #fff;
+        }
+        #topBtn{
+            position: fixed;
+            top: 820px;
+            right: 80px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #2e4478;
+            cursor: pointer;
+            opacity: 0;
+            transition: .4s;
+        }
+        #topBtn::after{
+            position: absolute;
+            content: "";
+            top: 15px;
+            right: 18px;
+            width: 12px;
+            height: 12px;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+            transform: rotate(-45deg);
+        }
+        #topBtn::before{
+            position: absolute;
+            content: "";
+            top: 15px;
+            right: 24px;
+            width: 2px;
+            height: 20px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <footer id="footer">
+        <div id="footer_content" class="wBox">
+            <div id="footerMenu_sec">
+                <ul>
+                    <li><a href="#"><span>개인정보처리방침</span></a></li>
+                    <li><a href="about01.html">회사소개</a></li>
+                </ul>
+            </div>
+            <hr>
+            <p>
+                대표이사 : 최인규 | 사업자번호 : 215-87-70297<br>
+                기업부설 연구소 : 서울시 송파구 법원로 128 문정 SK V1 GL 매트로시티 C동 1305호<br>
+                전화 : <a href="tel:010-9252-2968">010-9252-2968</a> | 대표 이메일 : <a href="mailto:jsct_sales@jsct.co.kr">jsct_sales@jsct.co.kr</a>
+            </p>
+            <p>
+                Copyright 2022 JSCTech CO., LTD. All Right Reserved.
+            </p>
+        </div>
+        <div id="topBtn"></div>
+    </footer>
+
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if(300 < $(document).scrollTop()){
+                    $('#topBtn').css({
+                        opacity: "1",
+                    });
+                }else{
+                    $('#topBtn').css({
+                        opacity: "0",
+                    });
+                }
+            });
+
+            $("#topBtn").on('click', function(){
+                $('html').animate({
+                    scrollTop: 0,
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>

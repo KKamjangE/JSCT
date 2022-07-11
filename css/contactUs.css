@@ -1,0 +1,208 @@
+@charset "utf-8";
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+#wrap{
+    height: 100%;
+}
+#mainImg{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background-image: url(../img/contactUs/contactMain.png);
+    background-position: center 40%;
+    background-size: 130%;
+    background-repeat: no-repeat;
+    transition: 3s;
+}
+#mainImg .wBox{
+    text-align: center;
+}
+#mainImg .wBox h3{
+    padding-top: 250px;
+    color: #fff;
+    font-size: 2.4em;
+}
+
+#smallMenu{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, .5);
+}
+#smallMenu li{
+    float: left;
+}
+#smallMenu li a{
+    display: block;
+    padding: 20px 80px;
+    color: #fff;
+}
+
+.content{
+    text-align: center;
+}
+.content h3{
+    font-size: 1.4em;
+    font-weight: 500;
+    margin-bottom: 50px;
+    color: #2e4478;
+}
+.content p{
+    font-size: 1.2em;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+#content01{
+    background-color: #f5f5f5;
+}
+#sec01{
+}
+#infoBox{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    margin: 50px auto;
+}
+#roadInfoBox img{
+    width: 250px;
+}
+#roadInfoBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#sec01 a:hover{
+    text-decoration: underline;
+}
+#sec01 p{
+    font-size: .95em;
+    margin: 10px 0;
+}
+#sec01 span{
+    color: #2e4478;
+    font-weight: 500;
+}
+
+
+/* ----------------------------------------------------------------------------- */
+
+#content02{
+    background-color: #fff;
+}
+#mailBox{
+    margin: 0 auto;
+    width: 80%;
+    border-spacing: 0;
+    border-top: 1px solid #d5d5d5;
+}
+#mailBox .input_sec{
+    padding: 10px 10px;
+}
+#mailBox input{
+    padding: 1px 3px;
+    font-size: .95em;
+    font-weight: 400;
+    border: 1px solid #d5d5d5;
+}
+#mailBox input:focus, #mailBox textarea:focus{
+    outline: .5px solid #c2131980;
+    box-shadow: 0px 0px 3px 1px rgba(255, 0, 0, 0.514);
+}
+#mailBox textarea{
+    padding: 1px 3px;
+    resize: none;
+    border: 1px solid #d5d5d5;
+}
+#mailBox tr{
+    height: 50px;
+    text-align: left;
+}
+#mailBox td{
+    border-bottom: 1px solid #d5d5d5;
+}
+#mailBox td span{
+    color: red;
+}
+#mailBox td:nth-child(1){
+    width: 300px;
+    background-color: #fbfbfb;
+    font-weight: 500;
+    text-align: center;
+}
+#mailBox .error{
+    display: none;
+    margin-left: 10px;
+    font-size: .9em;
+    color: red;
+}
+#mailBtn_sec{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+button#sendBtn {
+    font-size: 20px;
+    background: #2e4478;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+   }
+   
+   button#sendBtn span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+   }
+   
+   button#sendBtn svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+   }
+   
+   button#sendBtn:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+   }
+   
+   button#sendBtn:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+   }
+   
+   button#sendBtn:hover span {
+    transform: translateX(5em);
+   }
+   
+   button#sendBtn:active {
+    transform: scale(0.95);
+   }
+   
+   @keyframes fly-1 {
+    from {
+     transform: translateY(0.1em);
+    }
+   
+    to {
+     transform: translateY(-0.1em);
+    }
+   }
+   
+   

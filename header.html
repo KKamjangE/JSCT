@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" type="text/javascript"></script>
+    <title>header</title>
+    <style>
+        #header {
+            display: flex;
+            align-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            width: 100%;
+            height: 70px;
+            border-bottom: 1px solid rgba(255, 255, 255, .4);
+            transition: .2s;
+        }
+
+        #header #logo_sec {
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+        }
+
+        #header h1 {
+            text-align: center;
+        }
+
+        #header h1 img{
+            width: 180px;
+        }
+
+        #header #menu {
+            width: 100%;
+            text-align: center;
+        }
+
+        #header #menu>li {
+            float: left;
+        }
+
+        #header #menu li {
+            width: 200px;
+        }
+
+        #header #menu a {
+            font-size: 1.1em;
+            font-weight: 500;
+            color: #fff;
+            transition: .3s;
+        }
+
+        #header #subMenu_sec {
+            display: none;
+            position: absolute;
+            width: 100%;
+            top: 70px;
+            padding: 10px 0 25px 20%;
+            background-color: #fff;
+        }
+
+        #header .subMenu {
+            float: left;
+        }
+
+        #header .subMenu li {
+            width: 200px;
+            text-align: center;
+        }
+
+        #header .subMenu a {
+            display: block;
+            padding: 10px 0;
+            opacity: .7;
+            font-weight: 500;
+            transition: .3s;
+        }
+
+        #header.activeBg {
+            background-color: #fff;
+        }
+
+        #header #menu a.activeFocus {
+            color: #333;
+        }
+
+        #header a:hover {
+            color: #c21319;
+            opacity: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div id="logo_sec">
+            <a href="index.html"><h1><img src="img/logo/JSCT_logo03_bold_white.png" alt="logo"></h1></a>
+        </div>
+        <div id="menu_sec">
+            <ul id="menu">
+                <li><a href="about01.html">회사소개</a></li>
+                <li><a href="#">주요사업</a></li>
+                <li><a href="QlikSense.html">주요제품</a></li>
+                <li><a href="contactUs.html">고객지원</a></li>
+            </ul>
+        </div>
+        <!--menu_sec-->
+        <div id="subMenu_sec">
+            <ul class="subMenu">
+                <li><a href="about01.html">인사말</a></li>
+                <li><a href="about02.html">회사개요</a></li>
+            </ul>
+            <ul class="subMenu">
+                <li><a href="#">RPA 구축</a></li>
+                <li><a href="#">BI/시각화 구축</a></li>
+                <li><a href="#">통계 알고리즘 분석</a></li>
+                <li><a href="#">빅데이터 시스템 구축</a></li>
+            </ul>
+            <ul class="subMenu">
+                <li><a href="QlikSense.html">QlikSense</a></li>
+                <li><a href="BluePrism.html">BluePrism</a></li>
+            </ul>
+            <ul class="subMenu">
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <!--subMenu_sec-->
+    </header>
+
+    <script>
+        $(document).ready(function () {
+            $("#header").on("mouseenter", function () {
+                $("#subMenu_sec").stop().slideDown(300);
+                $("#header").addClass("activeBg");
+                $("#menu a").addClass("activeFocus");
+                $('#bg').stop().slideDown(300);
+                $('#logo_sec img').attr('src', 'img/logo/JSCT_logo02.png');
+            });
+            $("#header").on("mouseleave", function () {
+                $("#subMenu_sec").stop().slideUp(300);
+                $("#header").removeClass("activeBg");
+                $("#menu a").removeClass("activeFocus");
+                $('#bg').stop().slideUp(300);
+                $('#logo_sec img').attr('src', 'img/logo/JSCT_logo03_bold_white.png');
+                $(window).scroll();
+            });
+            
+            $(window).scroll(function () {
+                if (0 < $(document).scrollTop()) {
+                    $("#header").addClass("activeBg");
+                    $("#menu a").addClass("activeFocus");
+                    $('#logo_sec img').attr('src', 'img/logo/JSCT_logo02.png');
+                } else {
+                    $("#header").removeClass("activeBg");
+                    $("#menu a").removeClass("activeFocus");
+                    $('#logo_sec img').attr('src', 'img/logo/JSCT_logo03_bold_white.png');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
