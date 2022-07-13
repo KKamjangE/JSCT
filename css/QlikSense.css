@@ -12,7 +12,7 @@ body{
     position: relative;
     width: 100%;
     height: 50%;
-    background-image: url(../img/product/aboutMain.jpg);
+    background-image: url(../img/product/qlik/replicateMain.png);
     background-position: center 40%;
     background-size: 130%;
     background-repeat: no-repeat;
@@ -64,6 +64,95 @@ body{
 
 #content01{
     background-color: #fff;
+}
+#sec01{
+    display: flex;
+    justify-content: space-around;
+    margin: 100px 0;
+}
+#sec02{
+    display: flex;
+    justify-content: space-around;
+}
+.learnMore{
+    width: 20%;
+}
+.learnMore h4{
+    color: #2e4478;
+    font-size: 1.1em;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+.learnMore img{
+    margin-bottom: 20px;
+}
+.learnMore:hover{
+    cursor: pointer;
+}
+.learnMore:hover h4{
+    text-decoration: none;
+}   
+.morePopBg{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 150;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+}
+.morePopBg:hover{
+    cursor: pointer;
+}
+.morePop{
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 15%;
+    z-index: 200;
+    width: 70%;
+    height: 50%;
+    padding: 30px;
+    background-color: #fff;
+    text-align: center;
+}
+.popContent{
+    display: flex;
+    justify-content: space-around;
+}
+.closeBtn{
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    padding: 8px 15px;
+    background-color: #2e4478;
+    color: #fff;
+    border-radius: 5px;
+    transition: .2s;
+}
+.closeBtn:hover{
+    cursor: pointer;
+    color: #f5f5f5;
+    background-color: #2e4478b7;
+}
+.popText{
+    width: 35%;
+    word-wrap: break-word;
+    text-align: left;
+}
+.popText h4{
+    font-size: 1.4em;
+    text-align: center;
+    margin: 10px 0 25px;
+}
+.popText p{
+    opacity: .8;
+    font-weight: 500;
+    line-height: 30px;
+}
+.morePop img, .morePop video{
+    width: 60%;
 }
 
 /* ----------------------------------------------------------------------------- */

@@ -96,6 +96,12 @@
             color: #c21319;
             opacity: 1;
         }
+        #qlik>a:hover{
+            cursor: pointer;
+        }
+        #qlikMenu{
+            display: none;
+        }
 
     </style>
 </head>
@@ -126,7 +132,13 @@
                 <li><a href="#">빅데이터 시스템 구축</a></li>
             </ul>
             <ul class="subMenu">
-                <li><a href="QlikSense.html">QlikSense</a></li>
+                <li  id="qlik">
+                    <a>Qlik</a>
+                    <ul id="qlikMenu">
+                        <li><a href="QlikSense.html">Qlik Sense</a></li>
+                        <li><a href="QlikReplicate.html">Qlik Replicate</a></li>
+                    </ul>
+                </li>
                 <li><a href="BluePrism.html">BluePrism</a></li>
             </ul>
             <ul class="subMenu">
@@ -164,6 +176,13 @@
                     $("#menu a").removeClass("activeFocus");
                     $('#logo_sec img').attr('src', 'img/logo/JSCT_logo03_bold_white.png');
                 }
+            });
+
+            $('#qlik').on('mouseenter', function(){
+                $('#qlikMenu').stop().slideDown(300)
+            });
+            $('#qlik').on('mouseleave', function(){
+                $('#qlikMenu').stop().slideUp(300)
             });
         });
     </script>
